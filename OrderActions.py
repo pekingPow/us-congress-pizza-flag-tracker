@@ -31,7 +31,8 @@ class OrderActions():
     @ classmethod
     def get_order_by_uuid(cls, uuid):
         order = OrderModel.query.filter(OrderModel.uuid == uuid).first()
-        return {"order_number": order.order_number, "uuid": order.uuid, "usa_state": order.usa_state, "coffice": order.coffice}
+        return order 
+        #{"order_number": order.order_number, "uuid": order.uuid, "usa_state": order.usa_state, "coffice": order.coffice}
 
     @ classmethod
     def get_coffice(cls, coffice):
